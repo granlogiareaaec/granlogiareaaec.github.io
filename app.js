@@ -57,7 +57,7 @@ const GOOGLE_SCRIPT_URL =
 
 
 const WHATSAPP_NUMERO =
-    "5939XXXXXXXX";
+    "593 98 406 1976";
 
 
 /* =====================================================
@@ -756,11 +756,11 @@ function actualizarWhatsApp(curso) {
     if (
         !WHATSAPP_NUMERO ||
         WHATSAPP_NUMERO ===
-            "5939XXXXXXXX"
+            "593 98 406 1976"
     ) {
 
         botonWhatsapp.href =
-            "#";
+            "https://wa.me/593984061976";
 
         return;
 
