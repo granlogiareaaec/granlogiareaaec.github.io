@@ -57,7 +57,7 @@ const GOOGLE_SCRIPT_URL =
 
 
 const WHATSAPP_NUMERO =
-    "593 98 406 1976";
+    "593984061976";
 
 
 /* =====================================================
@@ -746,7 +746,7 @@ function guardarDatosCurso() {
 // CONFIGURACIÓN DE WHATSAPP
 // ==========================================
 
-const WHATSAPP_NUMERO = "593984061976";
+
 
 
 // ==========================================
@@ -779,7 +779,6 @@ function actualizarWhatsApp(curso) {
         `https://wa.me/${WHATSAPP_NUMERO}?text=${mensajeCodificado}`;
 
 }
-
 /* =====================================================
    MOSTRAR / OCULTAR MENSAJES
 ===================================================== */
