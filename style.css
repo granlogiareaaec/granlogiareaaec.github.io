@@ -1,0 +1,1554 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --rojo: #dd2d4a;
+    --rojo-oscuro: #880d1e;
+    --rojo-claro: #f26a8d;
+
+    --dorado: #c8a45d;
+    --dorado-claro: #e1c27b;
+    --dorado-oscuro: #a98642;
+
+    --blanco: #ffffff;
+    --crema: #f8f6f0;
+
+    --gris: #6b7280;
+    --gris-claro: #e5e7eb;
+    --gris-fondo: #f3f4f6;
+
+    --negro: #111111;
+
+    --sombra:
+        0 15px 40px rgba(0, 0, 0, 0.10);
+
+    --sombra-fuerte:
+        0 20px 60px rgba(0, 0, 0, 0.18);
+
+    --radio: 14px;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--negro);
+
+    background: var(--blanco);
+
+    line-height: 1.6;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.contenedor {
+
+    width: min(1180px, 92%);
+
+    margin: 0 auto;
+
+}
+
+
+/* =====================================================
+   BARRA SUPERIOR
+===================================================== */
+
+.barra-superior {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(136, 13, 30, 0.98);
+
+    border-bottom:
+        1px solid rgba(200, 164, 93, 0.35);
+
+}
+
+
+.barra-contenido {
+
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.marca {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.logo {
+
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: contain;
+
+}
+
+
+.marca-texto {
+
+    color: var(--blanco);
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.marca-texto strong {
+
+    color: var(--dorado-claro);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    border: 2px solid transparent;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    letter-spacing: .4px;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+
+}
+
+
+.btn:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.btn-dorado {
+
+    background: var(--dorado);
+
+    color: var(--rojo-oscuro);
+
+}
+
+
+.btn-dorado:hover {
+
+    background: var(--dorado-claro);
+
+    box-shadow:
+        0 8px 20px rgba(200, 164, 93, .30);
+
+}
+
+
+.btn-verde {
+
+    background: var(--rojo);
+
+    color: var(--blanco);
+
+}
+
+
+.btn-verde:hover {
+
+    background: var(--rojo-claro);
+
+    box-shadow:
+        0 8px 20px rgba(136, 13, 30, .25);
+
+}
+
+
+.btn-menu {
+
+    min-height: 42px;
+
+    padding:
+        9px 18px;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(136, 13, 30, .96),
+            rgba(136, 13, 30, .78),
+            rgba(136, 13, 30, .48)
+        ),
+
+        url("img/fondo.jpg")
+        center / cover no-repeat;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(200, 164, 93, .14),
+            transparent 40%
+        );
+
+}
+
+
+.hero-contenido {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: var(--blanco);
+
+    max-width: 780px;
+
+}
+
+
+.etiqueta {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    padding: 8px 15px;
+
+    border:
+
+        1px solid
+        rgba(225, 194, 123, .65);
+
+    color: var(--dorado-claro);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.hero h1 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px, 6vw, 72px);
+
+    line-height: 1.08;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero p {
+
+    max-width: 680px;
+
+    color: rgba(255,255,255,.88);
+
+    font-size: 19px;
+
+    margin-bottom: 32px;
+
+}
+
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.seccion {
+
+    padding: 90px 0;
+
+}
+
+
+.introduccion {
+
+    padding: 85px 0;
+
+    background: var(--crema);
+
+}
+
+
+.contenido-centro {
+
+    max-width: 800px;
+
+    text-align: center;
+
+}
+
+
+.subtitulo {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--dorado-oscuro);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.introduccion h2,
+.titulo-seccion h2,
+.registro-info h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: var(--rojo-oscuro);
+
+    font-size:
+        clamp(30px, 4vw, 46px);
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+
+}
+
+
+.introduccion p {
+
+    color: var(--gris);
+
+    margin-bottom: 12px;
+
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.titulo-seccion {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 50px;
+
+}
+
+
+.titulo-seccion p {
+
+    color: var(--gris);
+
+}
+
+
+/* =====================================================
+   CURSOS
+===================================================== */
+
+.cursos {
+
+    background: var(--blanco);
+
+}
+
+
+.cursos-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+
+}
+
+
+.curso-card {
+
+    position: relative;
+
+    padding: 36px 30px;
+
+    background: var(--blanco);
+
+    border:
+        1px solid var(--gris-claro);
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.curso-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--sombra-fuerte);
+
+}
+
+
+.curso-card.destacado {
+
+    border:
+        2px solid var(--dorado);
+
+}
+
+
+.curso-card.destacado::before {
+
+    content:
+        "DESTACADO";
+
+    position: absolute;
+
+    top: 20px;
+
+    right: -34px;
+
+    transform:
+        rotate(45deg);
+
+    width: 130px;
+
+    padding: 6px;
+
+    text-align: center;
+
+    background: var(--dorado);
+
+    color: var(--rojo-oscuro);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.curso-numero {
+
+    color: var(--dorado);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+
+}
+
+
+.curso-nivel {
+
+    color: var(--rojo);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.curso-card h3 {
+
+    min-height: 90px;
+
+    margin-top: 15px;
+
+    color: var(--rojo-oscuro);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 25px;
+
+    line-height: 1.25;
+
+}
+
+
+.linea-dorada {
+
+    width: 55px;
+
+    height: 3px;
+
+    background: var(--dorado);
+
+    margin:
+        20px 0 25px;
+
+}
+
+
+.curso-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.curso-info div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+}
+
+
+.curso-info span {
+
+    color: var(--gris);
+
+    font-size: 12px;
+
+}
+
+
+.curso-info strong {
+
+    color: var(--rojo-oscuro);
+
+    font-size: 14px;
+
+}
+
+
+.curso-card .btn {
+
+    width: 100%;
+
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.informacion {
+
+    background: var(--gris-fondo);
+
+}
+
+
+.informacion-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.informacion-box {
+
+    padding: 30px;
+
+    background: var(--blanco);
+
+    border-radius: var(--radio);
+
+    text-align: center;
+
+}
+
+
+.icono {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin:
+        0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(200, 164, 93, .15);
+
+    color: var(--dorado-oscuro);
+
+    font-size: 23px;
+
+}
+
+
+.informacion-box h3 {
+
+    color: var(--rojo-oscuro);
+
+    margin-bottom: 10px;
+
+    font-family: Georgia, serif;
+
+}
+
+
+.informacion-box p {
+
+    color: var(--gris);
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   REGISTRO
+===================================================== */
+
+.registro {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rojo-oscuro),
+            var(--rojo)
+        );
+
+}
+
+
+.registro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        .85fr 1.15fr;
+
+    gap: 60px;
+
+    align-items: start;
+
+}
+
+
+.registro-info {
+
+    color: var(--blanco);
+
+    position: sticky;
+
+    top: 110px;
+
+}
+
+
+.registro-info .subtitulo {
+
+    color: var(--dorado-claro);
+
+}
+
+
+.registro-info h2 {
+
+    color: var(--blanco);
+
+}
+
+
+.registro-info > p {
+
+    color:
+        rgba(255,255,255,.78);
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =====================================================
+   INFORMACIÓN CURSO SELECCIONADO
+===================================================== */
+
+.informacion-curso {
+
+    padding: 28px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(225,194,123,.35);
+
+    border-radius:
+        var(--radio);
+
+    margin-bottom: 22px;
+
+}
+
+
+.curso-seleccionado-label {
+
+    color: var(--dorado-claro);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.informacion-curso h3 {
+
+    color: var(--blanco);
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    line-height: 1.3;
+
+    margin:
+        10px 0 22px;
+
+}
+
+
+.curso-datos {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.curso-datos p {
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.80);
+
+    font-size: 14px;
+
+}
+
+
+.curso-datos strong {
+
+    color: var(--dorado-claro);
+
+}
+
+
+.registro-nota {
+
+    padding: 20px;
+
+    border-left:
+        3px solid var(--dorado);
+
+    background:
+        rgba(0,0,0,.13);
+
+}
+
+
+.registro-nota strong {
+
+    color: var(--dorado-claro);
+
+}
+
+
+.registro-nota p {
+
+    margin-top: 7px;
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   FORMULARIO
+===================================================== */
+
+.formulario-contenedor {
+
+    padding: 38px;
+
+    background: var(--blanco);
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra-fuerte);
+
+}
+
+
+.formulario {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.formulario-titulo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 10px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid var(--gris-claro);
+
+}
+
+
+.formulario-titulo span {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--rojo);
+
+    color: var(--blanco);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.formulario-titulo h3 {
+
+    color: var(--rojo-oscuro);
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+}
+
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.campo label {
+
+    color: #303030;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.campo input,
+.campo select,
+.campo textarea {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border:
+        1px solid #d5d7da;
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: #111;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+
+    color: #9ca3af;
+
+}
+
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+
+    border-color: var(--dorado);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(200,164,93,.14);
+
+}
+
+
+.campo textarea {
+
+    resize: vertical;
+
+    min-height: 110px;
+
+}
+
+
+/* =====================================================
+   HONEYPOT
+===================================================== */
+
+.campo-honeypot {
+
+    position: absolute;
+
+    left: -9999px;
+
+    width: 1px;
+
+    height: 1px;
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
+   CHECKBOX
+===================================================== */
+
+.check-politica {
+
+    padding: 15px;
+
+    background: var(--gris-fondo);
+
+    border-radius: 8px;
+
+}
+
+
+.check-politica label {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+}
+
+
+.check-politica input {
+
+    margin-top: 4px;
+
+    accent-color: var(--rojo);
+
+}
+
+
+.check-politica span {
+
+    color: #555;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   BOTÓN FORMULARIO
+===================================================== */
+
+.btn-enviar {
+
+    width: 100%;
+
+    border: none;
+
+    min-height: 54px;
+
+    font-size: 15px;
+
+}
+
+
+.btn-enviar:disabled {
+
+    opacity: .65;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+/* =====================================================
+   MENSAJES
+===================================================== */
+
+.mensaje {
+
+    display: none;
+
+    padding: 18px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+}
+
+
+.mensaje-exito {
+
+    background: #ecfdf3;
+
+    border:
+        1px solid #9fe2b9;
+
+    color: #14532d;
+
+}
+
+
+.mensaje-error {
+
+    background: #fef2f2;
+
+    border:
+        1px solid #fecaca;
+
+    color: #991b1b;
+
+}
+
+
+.mensaje p {
+
+    margin-top: 5px;
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp {
+
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    z-index: 999;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 13px 18px;
+
+    border-radius: 50px;
+
+    background: #25D366;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.22);
+
+    transition:
+        transform .2s ease;
+
+}
+
+
+.whatsapp:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.whatsapp-icon {
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    padding: 50px 0;
+
+    background:
+        #4a0712;
+
+    color:
+        rgba(255,255,255,.7);
+
+    text-align: center;
+
+}
+
+
+.footer-contenido {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-direction: column;
+
+}
+
+
+.footer-logo {
+
+    width: 75px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.footer p {
+
+    font-size: 13px;
+
+}
+
+
+.footer .copyright {
+
+    margin-top: 10px;
+
+    color:
+        rgba(255,255,255,.45);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .cursos-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .curso-card:last-child {
+
+        grid-column:
+            1 / -1;
+
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+    }
+
+
+    .registro-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .registro-info {
+
+        position: static;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .barra-contenido {
+
+        min-height: 70px;
+
+    }
+
+
+    .marca-texto {
+
+        display: none;
+
+    }
+
+
+    .btn-menu {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        min-height: 550px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+
+    .seccion {
+
+        padding: 65px 0;
+
+    }
+
+
+    .cursos-grid,
+    .informacion-grid,
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .curso-card:last-child {
+
+        grid-column: auto;
+
+        max-width: none;
+
+    }
+
+
+    .formulario-contenedor {
+
+        padding: 24px 18px;
+
+    }
+
+
+    .whatsapp {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        padding: 13px;
+
+    }
+
+
+    .whatsapp span:last-child {
+
+        display: none;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .informacion-curso h3 {
+
+        font-size: 21px;
+
+    }
+
+
+    .curso-card {
+
+        padding: 28px 22px;
+
+    }
+
+}
