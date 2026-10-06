@@ -741,7 +741,6 @@ function guardarDatosCurso() {
    WHATSAPP
 ===================================================== */
 
-
 function actualizarWhatsApp(curso) {
 
     if (
@@ -752,11 +751,14 @@ function actualizarWhatsApp(curso) {
 
     }
 
+    if (botonWhatsapp.tagName === "BUTTON") {
+        botonWhatsapp.type = "button";
+    }
 
     if (
         !WHATSAPP_NUMERO ||
         WHATSAPP_NUMERO ===
-            "5939984061976"
+            "REEMPLAZAR_NUMERO_WHATSAPP"
     ) {
 
         botonWhatsapp.href =
@@ -766,10 +768,8 @@ function actualizarWhatsApp(curso) {
 
     }
 
-
     let mensaje =
         "Hola, deseo recibir información sobre los Programas de Formación Masónica 2026.";
-
 
     if (curso) {
 
@@ -778,12 +778,10 @@ function actualizarWhatsApp(curso) {
 
     }
 
-
     botonWhatsapp.href =
         `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensaje)}`;
 
 }
-
 
 /* =====================================================
    MOSTRAR / OCULTAR MENSAJES
