@@ -104,7 +104,7 @@ const DATOS_PAGO = {
         "Cuenta Corriente",
 
     correoConfirmacion:
-        "josesalvador1@outlook.com",
+        "nestormoncadalandeta@gmail.com",
 
     paypal:
         "Si no puede realizar una transferencia bancaria, responda a este correo escribiendo la palabra “PayPal”. Nuestro equipo le enviará un código QR para completar el pago.",
