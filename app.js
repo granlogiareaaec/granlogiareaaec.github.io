@@ -187,10 +187,10 @@ const CURSOS = {
             "Aula Virtual + Zoom",
 
         duracion:
-            "Por confirmar",
+            "1 mes",
 
         horas:
-            "Por confirmar",
+            "48 horas",
 
         valor:
             "$30,00 / $50,00",
@@ -216,10 +216,10 @@ const CURSOS = {
             "Aula Virtual + Zoom",
 
         duracion:
-            "Por confirmar",
+            "1 mes",
 
         horas:
-            "Por confirmar",
+            "48 horas",
 
         valor:
             "$30,00 / $50,00",
